@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Folio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+<nav>
+  <span class="logo">Racheal Kamikazi</span>
+  <button class="nav-toggle" id="nav-toggle" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="#about" onclick="closeNav()">About</a>
+    <a href="#skills" onclick="closeNav()">Skills</a>
+    <a href="#projects" onclick="closeNav()">Projects</a>
+    <a href="#contact" class="nc btn" style="padding:8px 18px;font-size:13px" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+<script>
+function toggleNav(){document.getElementById('nav-links').classList.toggle('open');document.getElementById('nav-overlay').classList.toggle('open');}
+function closeNav(){document.getElementById('nav-links').classList.remove('open');document.getElementById('nav-overlay').classList.remove('open');}
+</script>
+<section class="hero" id="hero" style="background:#000d05;color:#00ff41"><div class="hi"><img class="av" src="https://oaqmumphojikjaldzmwz.supabase.co/storage/v1/object/public/assets/a1d8119a-3106-4467-b87c-cc9b2dbe3ea9/avatars/1774997442217-2wn0waio7gr.jpg" alt="Folio"/><h1>Racheal Kamikazi</h1><p class="jt">Student</p><p class="tl">Breaking things ethically since 2022. CEH certified. CTF top-50 global competitor.</p><div class="hc"><a href="#projects" class="btn">./view_projects</a><a href="#contact" class="btn btn-o">Get in touch</a></div></div></section>
+<section class="about" id="about" style="background:#000a03;color:#88ff88"><div class="c"><div class="ag"><div><h2>About me</h2><p>A cybersecurity student at Georgia Tech specialising in penetration testing and reverse engineering. Top 3% on HackTheBox. Bug bounty hunter with 12 CVEs responsibly disclosed.</p><div class="am"><div class="ami"><strong>Location</strong>Atlanta, GA</div><div class="ami"><strong>Email</strong><a href="mailto:kai@gatech.edu">kai@gatech.edu</a></div></div></div><div class="av2"></div></div></div></section>
+<section class="skills" id="skills" style="background:#000d05;color:#00ff41"><div class="c"><h2>Arsenal</h2><div class="sg"><span class="st sp">Kali Linux</span><span class="st sd">Burp Suite</span><span class="st so">Metasploit</span><span class="st sp">Wireshark</span><span class="st sd">Assembly</span><span class="st so">C</span><span class="st sp">Python</span><span class="st sd">Network Analysis</span><span class="st so">Cryptography</span><span class="st sp">Reverse Engineering</span><span class="st sd">OSINT</span></div></div></section>
+<section class="projects" id="projects" style="background:#000a03;color:#88ff88"><div class="c"><h2>Operations</h2><div class="pg"><div class="pc"><div class="pt">⚡</div><div class="pb"><h3>DEF CON CTF - Top 50</h3><p>Ranked 47th globally at DEF CON CTF qualifiers. Solved 18 challenges in 48 hours.</p><div class="pl"><a href="htt" class="btn" target="_blank">Live ↗</a> <a href="htt" class="btn btn-o" target="_blank">GitHub</a></div></div></div><div class="pc"><div class="pt">🔧</div><div class="pb"><h3>VPN Zero-Day Report</h3><p>Discovered and responsibly disclosed an RCE vulnerability in a popular open-source VPN client.</p><div class="pl"> </div></div></div><div class="pc"><div class="pt">⚙️</div><div class="pb"><h3>CampusNet Audit</h3><p>Performed an authorised penetration test of the university network. 23 findings documented.</p><div class="pl"> </div></div></div></div></div></section>
+<section class="testimonials" id="testimonials" ><div class="c"><h2>Testimonials</h2><div class="tms-grid"><div class="tm-card"><p class="tm-quote">&ldquo;Working with this person was an absolute pleasure.&rdquo;</p><div class="tm-author"><span class="tm-name">Jane Smith</span><span class="tm-role">CEO, Acme Inc.</span></div></div></div></div></section>
+<section class="contact" id="contact" style="background:#000d05;color:#00ff41"><div class="c"><h2>Initiate contact</h2><p class="sub">Available for security internships and bug bounty programmes.</p><div class="cl"><a href="mailto:kai@gatech.edu">✉ Email</a><a href="https://linkedin.com" target="_blank">in LinkedIn</a><a href="https://github.com" target="_blank">◎ GitHub</a></div></div></section>
+<footer style="background:#000000;color:#003300"><p>2025 Kai Nakamura</p></footer>
+<script>
+  const obs = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+  document.querySelectorAll('section,footer').forEach(el=>{el.classList.add('fade-block');obs.observe(el);});
+</script>
+</body>
+</html>
